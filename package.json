@@ -1,0 +1,23 @@
+{
+  "name": "herbarius-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "clean": "rm -rf public/fr public/en public/index.html",
+    "test": "eleventy && node --test tests/html.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthieu-viel-fr/herbarius-static.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "cheerio": "^1.2.0"
+  }
+}

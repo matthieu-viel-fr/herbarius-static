@@ -1,0 +1,70 @@
+{
+  "fr": {
+    "logoTagline": "Jardin botanique m\u00e9di\u00e9val \u2014 Planguenoual, Bretagne",
+    "menuLabel": "Ouvrir le menu",
+    "navLabel": "Navigation principale",
+    "langSwitchLabel": "EN",
+    "langSwitchFlag": "\ud83c\uddec\ud83c\udde7",
+    "langSwitchTitle": "View in English",
+    "nav": {
+      "index": "Accueil",
+      "programme": "Programme",
+      "activites": "Activit\u00e9s",
+      "hebergements": "H\u00e9bergements",
+      "visite-virtuelle": "Visite virtuelle",
+      "contact": "Contact et infos pratiques"
+    },
+    "footer": {
+      "activites": "Activit\u00e9s",
+      "hebergements": "H\u00e9bergements",
+      "horaires": "Horaires",
+      "contact": "Contact",
+      "visitesBot": "Visites botaniques",
+      "ateliers": "Ateliers",
+      "conferences": "Conf\u00e9rences",
+      "conception": "Conception de jardins",
+      "ventePlantes": "Vente de plantes",
+      "cabane": "Cabane dans les arbres",
+      "tente": "Tente en bois",
+      "camping": "Camping \u00e0 la ferme",
+      "pepiniere": "P\u00e9pini\u00e8re :",
+      "pepiHoraires": "De mars \u00e0 juin, tous les matins de 9h30 \u00e0 midi.",
+      "visites": "Visites :",
+      "visitesHoraires": "Toute l\u2019ann\u00e9e sur rdv par mail."
+    }
+  },
+  "en": {
+    "logoTagline": "Medieval botanical garden \u2014 Planguenoual, Brittany",
+    "menuLabel": "Open menu",
+    "navLabel": "Main navigation",
+    "langSwitchLabel": "FR",
+    "langSwitchFlag": "\ud83c\uddeb\ud83c\uddf7",
+    "langSwitchTitle": "Voir en fran\u00e7ais",
+    "nav": {
+      "index": "Home",
+      "programme": "Events",
+      "activites": "Activities",
+      "hebergements": "Accommodation",
+      "visite-virtuelle": "Virtual tour",
+      "contact": "Contact & practical info"
+    },
+    "footer": {
+      "activites": "Activities",
+      "hebergements": "Accommodation",
+      "horaires": "Opening hours",
+      "contact": "Contact",
+      "visitesBot": "Botanical tours",
+      "ateliers": "Workshops",
+      "conferences": "Lectures",
+      "conception": "Garden design",
+      "ventePlantes": "Plant sales",
+      "cabane": "Treehouse",
+      "tente": "Wooden tent",
+      "camping": "Farm campsite",
+      "pepiniere": "Plant nursery:",
+      "pepiHoraires": "March to June, every morning from 9:30am to noon.",
+      "visites": "Tours:",
+      "visitesHoraires": "All year round by appointment (email)."
+    }
+  }
+}

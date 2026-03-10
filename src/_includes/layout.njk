@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description }}">
+  <title>{{ title }}</title>
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="alternate" hreflang="fr" href="../fr/{{ pageSlug }}.html">
+  <link rel="alternate" hreflang="en" href="../en/{{ pageSlug }}.html">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-text">Herbarius</span>
+        <span class="logo-tagline">{{ i18n[lang].logoTagline }}</span>
+      </a>
+      <button class="nav-toggle" aria-label="{{ i18n[lang].menuLabel }}" aria-expanded="false">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <nav aria-label="{{ i18n[lang].navLabel }}">
+        <ul class="nav-links">
+          {%- set navItems = [
+            {slug: "index", page: "index"},
+            {slug: "programme", page: "programme"},
+            {slug: "activites", page: "activites"},
+            {slug: "hebergements", page: "hebergements"},
+            {slug: "visite-virtuelle", page: "visite-virtuelle"},
+            {slug: "contact", page: "contact"}
+          ] -%}
+          {%- for item in navItems %}
+          <li><a href="{{ item.page }}.html"{% if navCurrent == item.slug %} aria-current="page"{% endif %}>{{ i18n[lang].nav[item.slug] }}</a></li>
+          {%- endfor %}
+          <li class="nav-lang"><a href="../{{ otherLang }}/{{ pageSlug }}.html" title="{{ i18n[lang].langSwitchTitle }}">{{ i18n[lang].langSwitchFlag }} {{ i18n[lang].langSwitchLabel }}</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-col">
+        <h4>{{ i18n[lang].footer.activites }}</h4>
+        <ul>
+          <li><a href="visites-botaniques.html">{{ i18n[lang].footer.visitesBot }}</a></li>
+          <li><a href="ateliers.html">{{ i18n[lang].footer.ateliers }}</a></li>
+          <li><a href="conferences.html">{{ i18n[lang].footer.conferences }}</a></li>
+          <li><a href="conception.html">{{ i18n[lang].footer.conception }}</a></li>
+          <li><a href="vente-plantes.html">{{ i18n[lang].footer.ventePlantes }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>{{ i18n[lang].footer.hebergements }}</h4>
+        <ul>
+          <li><a href="hebergements.html">{{ i18n[lang].footer.cabane }}</a></li>
+          <li><a href="hebergements.html">{{ i18n[lang].footer.tente }}</a></li>
+          <li><a href="hebergements.html">{{ i18n[lang].footer.camping }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>{{ i18n[lang].footer.horaires }}</h4>
+        <p><strong>{{ i18n[lang].footer.pepiniere }}</strong> {{ i18n[lang].footer.pepiHoraires }}</p>
+        <p><strong>{{ i18n[lang].footer.visites }}</strong> {{ i18n[lang].footer.visitesHoraires }}</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>{{ i18n[lang].footer.contact }}</h4>
+        <address>
+          <p>Florence GOULLEY</p>
+          <p>704 Le Haut du Val</p>
+          <p>Planguenoual</p>
+          <p>22400 Lamballe Armor</p>
+          <p><a href="mailto:f.goulley@herbarius.net">f.goulley@herbarius.net</a></p>
+          <p><a href="tel:+33603432528">06 03 43 25 28</a></p>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>HERBARIUS | Florence GOULLEY | herbarius.net</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
