@@ -1,60 +1,248 @@
 ---
 layout: layout.njk
 title: "Activités — Herbarius"
-description: "Activités du jardin botanique Herbarius — visites botaniques, ateliers, conférences, vente de plantes, conception de jardins, hébergements."
+description: "Toutes les activités au jardin Herbarius — Visites botaniques, ateliers, conférences, conception de jardins, vente de plantes."
 navCurrent: "activites"
 ---
 
   <main>
 
-    <section class="section tiles-section">
+    <!-- ========== HERO + NAVIGATION RAPIDE ========== -->
+    <section class="act-hero" style="background-image: url('/images/jardin/ateliers/atelier_4.jpg');">
+      <div class="act-hero-overlay">
+        <div class="container">
+          <h1 class="act-hero-title">Nos activités</h1>
+          <p class="act-hero-subtitle">Découvrez tout ce que propose Herbarius</p>
+          <nav class="act-quicknav" aria-label="Accès rapide">
+            <a href="#visites" class="act-quicknav-link">Visites botaniques</a>
+            <a href="#ateliers" class="act-quicknav-link">Ateliers</a>
+            <a href="#conferences" class="act-quicknav-link">Conférences</a>
+            <a href="#conception" class="act-quicknav-link">Conception de jardins</a>
+            <a href="#pepiniere" class="act-quicknav-link">Pépinière</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VISITES BOTANIQUES ========== -->
+    <section class="section" id="visites">
       <div class="container">
-        <h1 class="section-title">Activités</h1>
-        <div class="tiles-grid">
+        <h2 class="section-title">Visites botaniques</h2>
+        <p class="section-subtitle">2h environ — Tout public</p>
 
-          <a href="visites-botaniques.html" class="tile">
-            <img src="/images/jardin/visite-botanique.JPG" alt="Visites botaniques au jardin Herbarius" loading="lazy">
-            <span class="tile-label">Visites botaniques</span>
-            <span class="tile-sub">Potager, plantes médicinales, plantes à bonbons</span>
-          </a>
-
-          <a href="ateliers.html" class="tile">
-            <img src="/images/jardin/panier.jpg" alt="Ateliers au jardin Herbarius" loading="lazy">
-            <span class="tile-label">Ateliers</span>
-            <span class="tile-sub">Cuisine de fleurs, jardinage au naturel, plessage d'osier</span>
-          </a>
-
-          <a href="conferences.html" class="tile">
-            <img src="/images/jardin/conférences.jpeg" alt="Conférences au jardin Herbarius" loading="lazy">
-            <span class="tile-label">Conférences</span>
-            <span class="tile-sub">Biodiversité, plantes médicinales, permaculture</span>
-          </a>
-
-          <a href="vente-plantes.html" class="tile">
-            <img src="/images/jardin/ventedeplantes.jpg" alt="Vente de plantes au jardin Herbarius" loading="lazy">
-            <span class="tile-label">Vente de plantes</span>
-            <span class="tile-sub">Comestibles, aromatiques, médicinales, fleurs à manger</span>
-          </a>
-
-          <a href="hebergements.html" class="tile tile--wide">
-            <img src="/images/jardin/cabane_index.jpg" alt="Hébergements à Herbarius — cabane, tente en bois, camping" loading="lazy">
-            <span class="tile-label">Hébergements</span>
-            <span class="tile-sub">Cabane dans les arbres · Tente en bois · Camping à la ferme</span>
-          </a>
-
-          <a href="conception.html" class="tile">
-            <img src="/images/jardin/conceptiondejardins.JPG" alt="Conception de jardins par Herbarius" loading="lazy">
-            <span class="tile-label">Conception de jardins</span>
-            <span class="tile-sub">Jardins médiévaux dessinés, conçus et plantés</span>
-          </a>
-
-
+        <div class="act-pricing-row">
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Visite libre</span>
+            <span class="act-pricing-price">5€<small>/pers.</small></span>
+            <span class="act-pricing-detail">Livret de visite prêté</span>
+          </div>
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Visite guidée</span>
+            <span class="act-pricing-price">10€<small>/pers.</small></span>
+            <span class="act-pricing-detail">Sur réservation par mail</span>
+          </div>
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Visite groupe</span>
+            <span class="act-pricing-price">Sur devis</span>
+            <span class="act-pricing-detail">Nous contacter par mail</span>
+          </div>
         </div>
 
-        <div class="tiles-cta">
-          <a href="programme.html" class="btn btn-primary btn--lg">Voir le programme printemps-été 2026</a>
+        <h3 class="act-sub-title">Thèmes de visite</h3>
+        <ul class="act-list">
+          <li>À la découverte des sauvages comestibles</li>
+          <li>À la découverte des plantes qui se mangent et qui soignent tout au long du GR 34</li>
+          <li>La gemmothérapie et les arbres qui soignent</li>
+          <li>Comment jardiner au naturel</li>
+          <li>Comment la biodiversité est source d'équilibre et donc de santé au jardin</li>
+          <li>Les plantes qui se mangeaient au Moyen Âge</li>
+          <li>Les plantes qui soignaient au Moyen Âge</li>
+          <li>Les légumes des Amérindiens</li>
+          <li>Les plantes à bonbons</li>
+          <li>À la découverte des plantes qui se mangent et qui soignent dans votre jardin</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== ATELIERS ========== -->
+    <section class="section section--white" id="ateliers">
+      <div class="container">
+        <h2 class="section-title">Ateliers</h2>
+        <p class="section-subtitle">2h30 environ — Tout public</p>
+
+        <div class="act-pricing-row">
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Groupe adulte ou enfant</span>
+            <span class="act-pricing-price">200€</span>
+            <span class="act-pricing-detail">25 personnes maximum</span>
+          </div>
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Individuel</span>
+            <span class="act-pricing-price">15€<small>/pers.</small></span>
+            <span class="act-pricing-detail">Minimum 5 personnes</span>
+          </div>
         </div>
 
+        <h3 class="act-sub-title">Nos ateliers</h3>
+        <div class="act-detail-grid">
+          <div class="act-detail-card">
+            <h4>Les fleurs comestibles</h4>
+            <p>Sentir — Goûter — Savoir les conserver pour les cuisiner.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Cuisine des plantes sauvages comestibles</h4>
+            <p>Récolte. Détermination. Recettes.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Repas de plantes sauvages comestibles et fleurs à manger</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Fabriquer ses bonbons</h4>
+            <p>Récolte des plantes — Fabrication — Dégustation — Recettes</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Les plantes aromatiques</h4>
+            <p>Présentation, variété et subjectivité des arômes et des goûts. Suivi d'un atelier confection de tisanes</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Les fruits et légumes</h4>
+            <p>40 variétés de tomates, 10 variétés de courges, légumes anciens</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Insectes et plantes</h4>
+            <p>La pollinisation. Nichoirs à auxiliaires.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Le paillage</h4>
+            <p>Réalisation de paillage, rôle sur la vie du sol, observation à la loupe binoculaire</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Les purins de plantes</h4>
+            <p>Récolte — Fabrication — Conservation — Utilisations</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Le semis au potager</h4>
+            <p>Diversité des graines, associations, rotations, engrais verts</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>La bouture</h4>
+            <p>Variétés de boutures. Réalisation.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>L'herbier de fleurs comestibles ou de salades sauvages</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Le plessage d'osier</h4>
+            <p>Tressage d'osier vivant (uniquement en février)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONFÉRENCES ========== -->
+    <section class="section" id="conferences">
+      <div class="container">
+        <h2 class="section-title">Conférences</h2>
+        <p class="section-subtitle">Florence Goulley vous propose des conférences autour de la plante comestible</p>
+
+        <div class="act-detail-grid">
+          <div class="act-detail-card">
+            <h4>Les fleurs à manger</h4>
+            <p>Détermination, Utilisations, Recettes</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Les plantes sauvages comestibles</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Les plantes au moyen âge</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>La biodiversité au jardin</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Les purins de plantes</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>L'histoire des bonbons et les plantes utilisées pour leur fabrication</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Les jardins d'inspiration médiévale</h4>
+          </div>
+        </div>
+
+        <h3 class="act-sub-title">Quelques références</h3>
+        <div class="act-references">
+          <span>Société d'horticulture de Quimper</span>
+          <span>Maison de la Rance Dinan</span>
+          <span>Fête bio de Landerneau</span>
+          <span>Fête des plantes de Morlaix</span>
+          <span>Jardin d'Ewen à Remungol</span>
+          <span>Fête des plantes de Saint-Brieuc</span>
+          <span>Maison de la baie d'Hillion</span>
+          <span>Fête de Saint-Ilan Langueux</span>
+          <span>Jardin médiéval de Lamballe</span>
+        </div>
+
+        <p class="act-cta">
+          <a href="/images/jardin/conferences.pdf" class="btn btn-primary" target="_blank" rel="noopener">Télécharger le programme des conférences (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== CONCEPTION DE JARDINS ========== -->
+    <section class="section section--white" id="conception">
+      <div class="container">
+        <h2 class="section-title">Conception de jardins médiévaux</h2>
+        <p class="section-subtitle">Nous concevons des jardins d'inspiration médiévale en Bretagne</p>
+
+        <div class="act-detail-grid act-detail-grid--2col">
+          <div class="act-detail-card">
+            <h4>Jardin Saint Jean de Lamballe</h4>
+            <p>Conçu en juin 2011. <a href="https://www.lamballe-armor.bzh/accueil-lamballe-armor/temps-libres/tourisme/en-ville-et-alentours/le-jardin-medieval" target="_blank" rel="noopener">Visiter le site</a> — <a href="https://www.beauxjardinsetpotagers.fr/galerie/152" target="_blank" rel="noopener">Voir la galerie</a></p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Cloître de Léhon et centre-ville</h4>
+            <p>Conçu en 2013. <a href="https://actu.fr/bretagne/dinan_22050/les-plantes-medievales-envahissent-lehon_6031850.html" target="_blank" rel="noopener">Lire l'article</a></p>
+          </div>
+        </div>
+
+        <p class="act-cta">
+          <a href="contact.html" class="btn btn-primary">Nous contacter pour votre projet</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PÉPINIÈRE ========== -->
+    <section class="section" id="pepiniere">
+      <div class="container">
+        <h2 class="section-title">Vente de plantes</h2>
+        <p class="section-subtitle">De mars à fin juin, tous les matins de 9h30 à midi (y compris dimanche et jours fériés)</p>
+
+        <p class="act-intro-text">Nous proposons des jeunes plants à cultiver dans votre jardin ou vos serres. Ce sont principalement des plantes à usage culinaire : fleurs à manger, légumes anciens, condimentaires et aromatiques, tisanes, aromatiques tropicales, plantes à bonbons et salades variées.</p>
+
+        <p class="act-intro-text">Mais nous proposons aussi des simples, plantes utilisées au Moyen Âge pour se soigner, des tinctoriales, et des plantes pour soigner les autres plantes.</p>
+
+        <div class="act-detail-grid">
+          <div class="act-detail-card"><h4>Fleurs à manger</h4></div>
+          <div class="act-detail-card"><h4>Légumes fruit</h4></div>
+          <div class="act-detail-card"><h4>Salades</h4></div>
+          <div class="act-detail-card"><h4>Condiments</h4></div>
+          <div class="act-detail-card"><h4>Légumes racine</h4></div>
+          <div class="act-detail-card"><h4>Légumes feuille</h4></div>
+          <div class="act-detail-card"><h4>Légumes anciens</h4></div>
+          <div class="act-detail-card"><h4>Condimentaires, aromatiques</h4></div>
+          <div class="act-detail-card"><h4>Tisanes</h4></div>
+          <div class="act-detail-card"><h4>Aromatiques tropicales</h4></div>
+          <div class="act-detail-card"><h4>Les simples</h4></div>
+          <div class="act-detail-card"><h4>Les tinctoriales</h4></div>
+          <div class="act-detail-card"><h4>Les petits fruits</h4></div>
+          <div class="act-detail-card"><h4>Plantes pour extraits</h4></div>
+        </div>
+
+        <p class="act-cta">
+          <a href="/documents/plantes-herbarius.pdf" class="btn btn-primary" target="_blank" rel="noopener">Toutes les plantes (PDF)</a>
+          <a href="/documents/TOMATES_herbarius_2023.pdf" class="btn btn-primary" target="_blank" rel="noopener">Liste des tomates (PDF)</a>
+        </p>
       </div>
     </section>
 

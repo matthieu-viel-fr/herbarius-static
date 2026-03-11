@@ -1,60 +1,248 @@
 ---
 layout: layout.njk
 title: "Activities — Herbarius"
-description: "Activities at Herbarius botanical garden — botanical tours, workshops, lectures, plant sales, garden design, accommodation."
+description: "All activities at Herbarius garden — Botanical tours, workshops, lectures, garden design, plant sales."
 navCurrent: "activites"
 ---
 
   <main>
 
-    <section class="section tiles-section">
+    <!-- ========== HERO + QUICK NAVIGATION ========== -->
+    <section class="act-hero" style="background-image: url('/images/jardin/ateliers/atelier_4.jpg');">
+      <div class="act-hero-overlay">
+        <div class="container">
+          <h1 class="act-hero-title">Our activities</h1>
+          <p class="act-hero-subtitle">Discover everything Herbarius has to offer</p>
+          <nav class="act-quicknav" aria-label="Quick access">
+            <a href="#visites" class="act-quicknav-link">Botanical tours</a>
+            <a href="#ateliers" class="act-quicknav-link">Workshops</a>
+            <a href="#conferences" class="act-quicknav-link">Lectures</a>
+            <a href="#conception" class="act-quicknav-link">Garden design</a>
+            <a href="#pepiniere" class="act-quicknav-link">Plant nursery</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BOTANICAL TOURS ========== -->
+    <section class="section" id="visites">
       <div class="container">
-        <h1 class="section-title">Activities</h1>
-        <div class="tiles-grid">
+        <h2 class="section-title">Botanical tours</h2>
+        <p class="section-subtitle">Approximately 2 hours — All ages</p>
 
-          <a href="visites-botaniques.html" class="tile">
-            <img src="/images/jardin/visite-botanique.JPG" alt="Botanical tours at Herbarius garden" loading="lazy">
-            <span class="tile-label">Botanical tours</span>
-            <span class="tile-sub">Kitchen garden, medicinal plants, sweet-making plants</span>
-          </a>
-
-          <a href="ateliers.html" class="tile">
-            <img src="/images/jardin/panier.jpg" alt="Workshops at Herbarius garden" loading="lazy">
-            <span class="tile-label">Workshops</span>
-            <span class="tile-sub">Flower cooking, natural gardening, willow weaving</span>
-          </a>
-
-          <a href="conferences.html" class="tile">
-            <img src="/images/jardin/conférences.jpeg" alt="Lectures at Herbarius garden" loading="lazy">
-            <span class="tile-label">Lectures</span>
-            <span class="tile-sub">Biodiversity, medicinal plants, permaculture</span>
-          </a>
-
-          <a href="vente-plantes.html" class="tile">
-            <img src="/images/jardin/ventedeplantes.jpg" alt="Plant sales at Herbarius garden" loading="lazy">
-            <span class="tile-label">Plant sales</span>
-            <span class="tile-sub">Edible, aromatic, medicinal, edible flowers</span>
-          </a>
-
-          <a href="hebergements.html" class="tile tile--wide">
-            <img src="/images/jardin/cabane_index.jpg" alt="Accommodation at Herbarius — treehouse, wooden tent, camping" loading="lazy">
-            <span class="tile-label">Accommodation</span>
-            <span class="tile-sub">Treehouse · Wooden tent · Farm camping</span>
-          </a>
-
-          <a href="conception.html" class="tile">
-            <img src="/images/jardin/conceptiondejardins.JPG" alt="Garden design by Herbarius" loading="lazy">
-            <span class="tile-label">Garden design</span>
-            <span class="tile-sub">Medieval gardens designed, built and planted</span>
-          </a>
-
-
+        <div class="act-pricing-row">
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Self-guided tour</span>
+            <span class="act-pricing-price">5€<small>/pers.</small></span>
+            <span class="act-pricing-detail">Guidebook provided on loan</span>
+          </div>
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Guided tour</span>
+            <span class="act-pricing-price">10€<small>/pers.</small></span>
+            <span class="act-pricing-detail">Booking by email required</span>
+          </div>
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Group tour</span>
+            <span class="act-pricing-price">On request</span>
+            <span class="act-pricing-detail">Please contact us by email</span>
+          </div>
         </div>
 
-        <div class="tiles-cta">
-          <a href="programme.html" class="btn btn-primary btn--lg">See the spring-summer 2026 programme</a>
+        <h3 class="act-sub-title">Tour themes</h3>
+        <ul class="act-list">
+          <li>Discovering wild edible plants</li>
+          <li>Discovering edible and medicinal plants along the GR34 coastal path</li>
+          <li>Gemmotherapy and healing trees</li>
+          <li>How to garden naturally</li>
+          <li>How biodiversity brings balance and health to the garden</li>
+          <li>Plants that were eaten in the Middle Ages</li>
+          <li>Plants that were used as medicine in the Middle Ages</li>
+          <li>Native American vegetables</li>
+          <li>Sweet-making plants</li>
+          <li>Discovering edible and medicinal plants in your own garden</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== WORKSHOPS ========== -->
+    <section class="section section--white" id="ateliers">
+      <div class="container">
+        <h2 class="section-title">Workshops</h2>
+        <p class="section-subtitle">Approximately 2.5 hours — All ages</p>
+
+        <div class="act-pricing-row">
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Adult or children's group</span>
+            <span class="act-pricing-price">200€</span>
+            <span class="act-pricing-detail">25 people maximum</span>
+          </div>
+          <div class="act-pricing-item">
+            <span class="act-pricing-type">Individual</span>
+            <span class="act-pricing-price">15€<small>/pers.</small></span>
+            <span class="act-pricing-detail">Minimum 5 people</span>
+          </div>
         </div>
 
+        <h3 class="act-sub-title">Our workshops</h3>
+        <div class="act-detail-grid">
+          <div class="act-detail-card">
+            <h4>Edible flowers</h4>
+            <p>Smell — Taste — Learn how to preserve them for cooking.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Wild edible plant cooking</h4>
+            <p>Harvesting. Identification. Recipes.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Wild edible plant and edible flower meal</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Make your own sweets</h4>
+            <p>Plant harvesting — Sweet-making — Tasting — Recipes</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Aromatic plants</h4>
+            <p>Presentation, variety and subjectivity of aromas and flavours. Followed by a herbal tea blending workshop</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Fruit and vegetables</h4>
+            <p>40 tomato varieties, 10 squash varieties, heritage vegetables</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Insects and plants</h4>
+            <p>Pollination. Building shelters for beneficial insects.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Mulching</h4>
+            <p>Making mulch, its role in soil life, observation under a binocular microscope</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Plant liquid feeds</h4>
+            <p>Harvesting — Brewing — Storing — Uses</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Sowing in the vegetable garden</h4>
+            <p>Seed diversity, companion planting, crop rotation, green manures</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Taking cuttings</h4>
+            <p>Types of cuttings. Hands-on practice.</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Herbarium of edible flowers or wild salad plants</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Willow weaving</h4>
+            <p>Living willow braiding (February only)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LECTURES ========== -->
+    <section class="section" id="conferences">
+      <div class="container">
+        <h2 class="section-title">Lectures</h2>
+        <p class="section-subtitle">Florence Goulley offers lectures on the theme of edible plants</p>
+
+        <div class="act-detail-grid">
+          <div class="act-detail-card">
+            <h4>Edible flowers</h4>
+            <p>Identification, Uses, Recipes</p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Wild edible plants</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Plants in the Middle Ages</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Biodiversity in the garden</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Plant liquid feeds</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>The history of sweets and the plants used to make them</h4>
+          </div>
+          <div class="act-detail-card">
+            <h4>Medieval-inspired gardens</h4>
+          </div>
+        </div>
+
+        <h3 class="act-sub-title">Some venues where we have given these lectures</h3>
+        <div class="act-references">
+          <span>Quimper Horticultural Society</span>
+          <span>Maison de la Rance, Dinan</span>
+          <span>Landerneau Organic Festival</span>
+          <span>Morlaix Plant Festival</span>
+          <span>Jardin d'Ewen, Remungol</span>
+          <span>Saint-Brieuc Plant Festival</span>
+          <span>Maison de la Baie, Hillion</span>
+          <span>Saint-Ilan Festival, Langueux</span>
+          <span>Medieval Garden, Lamballe</span>
+        </div>
+
+        <p class="act-cta">
+          <a href="/images/jardin/conferences.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download the lecture programme (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== GARDEN DESIGN ========== -->
+    <section class="section section--white" id="conception">
+      <div class="container">
+        <h2 class="section-title">Medieval garden design</h2>
+        <p class="section-subtitle">We design medieval-inspired gardens in Brittany</p>
+
+        <div class="act-detail-grid act-detail-grid--2col">
+          <div class="act-detail-card">
+            <h4>Saint Jean garden in Lamballe</h4>
+            <p>Designed in June 2011. <a href="https://www.lamballe-armor.bzh/accueil-lamballe-armor/temps-libres/tourisme/en-ville-et-alentours/le-jardin-medieval" target="_blank" rel="noopener">Visit website</a> — <a href="https://www.beauxjardinsetpotagers.fr/galerie/152" target="_blank" rel="noopener">View gallery</a></p>
+          </div>
+          <div class="act-detail-card">
+            <h4>Cloister garden at Lehon and town centre</h4>
+            <p>Designed in 2013. <a href="https://actu.fr/bretagne/dinan_22050/les-plantes-medievales-envahissent-lehon_6031850.html" target="_blank" rel="noopener">Read article</a></p>
+          </div>
+        </div>
+
+        <p class="act-cta">
+          <a href="contact.html" class="btn btn-primary">Contact us for your project</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PLANT NURSERY ========== -->
+    <section class="section" id="pepiniere">
+      <div class="container">
+        <h2 class="section-title">Plant sales</h2>
+        <p class="section-subtitle">March to end of June, every morning from 9:30am to noon (including Sundays and public holidays)</p>
+
+        <p class="act-intro-text">We offer young plants to grow in your garden or greenhouse. These are mainly plants for culinary use: edible flowers, heritage vegetables, seasonings and aromatics, herbal teas, tropical aromatics, sweet-making plants and assorted salads.</p>
+
+        <p class="act-intro-text">We also offer simples (medicinal plants used in the Middle Ages), dye plants, and plants for making plant-based treatments.</p>
+
+        <div class="act-detail-grid">
+          <div class="act-detail-card"><h4>Edible flowers</h4></div>
+          <div class="act-detail-card"><h4>Fruit vegetables</h4></div>
+          <div class="act-detail-card"><h4>Salads</h4></div>
+          <div class="act-detail-card"><h4>Seasonings</h4></div>
+          <div class="act-detail-card"><h4>Root vegetables</h4></div>
+          <div class="act-detail-card"><h4>Leaf vegetables</h4></div>
+          <div class="act-detail-card"><h4>Heritage vegetables</h4></div>
+          <div class="act-detail-card"><h4>Seasonings, aromatics</h4></div>
+          <div class="act-detail-card"><h4>Herbal teas</h4></div>
+          <div class="act-detail-card"><h4>Tropical aromatics</h4></div>
+          <div class="act-detail-card"><h4>Simples</h4></div>
+          <div class="act-detail-card"><h4>Dye plants</h4></div>
+          <div class="act-detail-card"><h4>Small fruits</h4></div>
+          <div class="act-detail-card"><h4>Plants for extracts</h4></div>
+        </div>
+
+        <p class="act-cta">
+          <a href="/documents/plantes-herbarius.pdf" class="btn btn-primary" target="_blank" rel="noopener">All plants (PDF)</a>
+          <a href="/documents/TOMATES_herbarius_2023.pdf" class="btn btn-primary" target="_blank" rel="noopener">Tomato list (PDF)</a>
+        </p>
       </div>
     </section>
 

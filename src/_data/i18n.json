@@ -14,6 +14,9 @@
       "visite-virtuelle": "Visite virtuelle",
       "contact": "Contact et infos pratiques"
     },
+    "breadcrumb": {
+      "activites": "Activit\u00e9s"
+    },
     "footer": {
       "activites": "Activit\u00e9s",
       "hebergements": "H\u00e9bergements",
@@ -47,6 +50,9 @@
       "hebergements": "Accommodation",
       "visite-virtuelle": "Virtual tour",
       "contact": "Contact & practical info"
+    },
+    "breadcrumb": {
+      "activites": "Activities"
     },
     "footer": {
       "activites": "Activities",
