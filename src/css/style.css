@@ -3052,3 +3052,110 @@ tbody tr:hover {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+
+/* --------------------------------------------------------------------------
+   Contact Page (.ct-*)
+   -------------------------------------------------------------------------- */
+
+.ct-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-10);
+}
+
+.ct-block {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.ct-block-title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-forest);
+}
+
+.ct-block-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-sage), var(--color-earth));
+  margin-top: var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.ct-address {
+  font-style: normal;
+  line-height: var(--leading-loose);
+}
+
+.ct-address p {
+  margin-bottom: var(--space-1);
+}
+
+.ct-gps {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+.ct-email {
+  margin-top: var(--space-3);
+}
+
+.ct-email a {
+  color: var(--color-forest);
+  font-weight: 600;
+}
+
+.ct-email a:hover {
+  color: var(--color-earth);
+}
+
+.ct-hours-item {
+  margin-bottom: var(--space-4);
+}
+
+.ct-hours-item:last-child {
+  margin-bottom: 0;
+}
+
+.ct-hours-item h3 {
+  font-size: var(--text-lg);
+  color: var(--color-forest);
+  margin-bottom: var(--space-1);
+}
+
+.ct-hours-item p {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-1);
+}
+
+.ct-map {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.ct-map img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px var(--color-shadow-lg);
+}
+
+.ct-map-link {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ct-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-block {
+    padding: var(--space-6);
+  }
+}

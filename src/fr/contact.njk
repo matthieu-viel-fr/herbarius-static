@@ -5,38 +5,65 @@ description: "Contact et infos pratiques — Herbarius. Coordonnées, horaires e
 navCurrent: "contact"
 ---
 
-  <main class="page-content">
-    <div class="container">
-
-      <h1>Contact et infos pratiques</h1>
-
-      <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 1.5rem 0;">
-
-        <div>
-          <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Coordonnées</h2>
-          <address style="font-style: normal;">
-            <p><strong>Florence GOULLEY</strong></p>
-            <p>704 Le Haut du Val</p>
-            <p>PLANGUENOUAL</p>
-            <p>22400 LAMBALLE ARMOR</p>
-            <p style="margin-top: 0.5rem;">GPS : 48°32'43.4" N, 2°35'44.6" W</p>
-            <p style="margin-top: 0.5rem;">Contact par mail uniquement :<br><a href="mailto:f.goulley@herbarius.net">f.goulley@herbarius.net</a></p>
-          </address>
-        </div>
-
-        <div>
-          <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Horaires</h2>
-          <p><strong>Pépinière :</strong> De mars à juin, tous les matins de 9h30 à midi, y compris dimanche et jours fériés.</p>
-          <p>Le reste de l'année, prendre rendez-vous par mail.</p>
-          <p style="margin-top: 0.75rem;"><strong>Visites :</strong> Toute l'année sur rendez-vous par mail.</p>
-        </div>
-
-      </div>
-
-      <div style="text-align: center; margin: 2rem 0;">
-        <img src="/images/jardin/carte_herbarius.jpg" alt="Carte d'accès à Herbarius" loading="lazy" style="max-width: 100%; height: auto;">
-        <p><a href="https://goo.gl/maps/DUlO9" target="_blank" rel="noopener">Voir sur Google Maps</a></p>
-      </div>
-
+  <!-- ========== HERO ========== -->
+  <section class="hero hero--compact" style="background-image: url('/images/jardin/jardin_vue_haut.jpg');">
+    <div class="hero-content">
+      <h1 class="hero-title">Contact et infos pratiques</h1>
+      <p class="hero-subtitle">Toutes les informations pour nous trouver et nous rendre visite</p>
     </div>
+  </section>
+
+  <main>
+
+    <!-- ========== COORDONNÉES & HORAIRES ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="ct-grid">
+
+          <div class="ct-block">
+            <h2 class="ct-block-title">Coordonnées</h2>
+            <address class="ct-address">
+              <p><strong>Florence GOULLEY</strong></p>
+              <p>704 Le Haut du Val</p>
+              <p>PLANGUENOUAL</p>
+              <p>22400 LAMBALLE ARMOR</p>
+              <p class="ct-gps">GPS : 48°32'43.4" N, 2°35'44.6" W</p>
+              <p class="ct-email">Contact par mail uniquement :<br><a href="mailto:f.goulley@herbarius.net">f.goulley@herbarius.net</a></p>
+            </address>
+          </div>
+
+          <div class="ct-block">
+            <h2 class="ct-block-title">Horaires</h2>
+            <div class="ct-hours">
+              <div class="ct-hours-item">
+                <h3>Pépinière</h3>
+                <p>De mars à juin, tous les matins de 9h30 à midi, y compris dimanche et jours fériés.</p>
+                <p>Le reste de l'année, prendre rendez-vous par mail.</p>
+              </div>
+              <div class="ct-hours-item">
+                <h3>Visites</h3>
+                <p>Toute l'année sur rendez-vous par mail.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PLAN D'ACCÈS ========== -->
+    <section class="section section--white">
+      <div class="container">
+        <h2 class="section-title">Plan d'accès</h2>
+        <p class="section-subtitle">Sur l'axe Rennes–Brest (RN12), entre Saint-Brieuc et Lamballe</p>
+
+        <div class="ct-map">
+          <img src="/images/jardin/carte_herbarius.jpg" alt="Carte d'accès à Herbarius" loading="lazy">
+        </div>
+        <p class="ct-map-link">
+          <a href="https://goo.gl/maps/DUlO9" class="btn btn-primary" target="_blank" rel="noopener">Voir sur Google Maps</a>
+        </p>
+      </div>
+    </section>
+
   </main>

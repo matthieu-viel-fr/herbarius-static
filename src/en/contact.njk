@@ -5,38 +5,65 @@ description: "Contact and practical info — Herbarius. Address, opening hours a
 navCurrent: "contact"
 ---
 
-  <main class="page-content">
-    <div class="container">
-
-      <h1>Contact and practical information</h1>
-
-      <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 1.5rem 0;">
-
-        <div>
-          <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Contact details</h2>
-          <address style="font-style: normal;">
-            <p><strong>Florence GOULLEY</strong></p>
-            <p>704 Le Haut du Val</p>
-            <p>PLANGUENOUAL</p>
-            <p>22400 LAMBALLE ARMOR</p>
-            <p style="margin-top: 0.5rem;">GPS: 48°32'43.4" N, 2°35'44.6" W</p>
-            <p style="margin-top: 0.5rem;">Contact by email only:<br><a href="mailto:f.goulley@herbarius.net">f.goulley@herbarius.net</a></p>
-          </address>
-        </div>
-
-        <div>
-          <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Opening hours</h2>
-          <p><strong>Nursery:</strong> From March to June, every morning from 9:30 am to noon, including Sundays and public holidays.</p>
-          <p>The rest of the year, please make an appointment by email.</p>
-          <p style="margin-top: 0.75rem;"><strong>Visits:</strong> All year round by appointment by email.</p>
-        </div>
-
-      </div>
-
-      <div style="text-align: center; margin: 2rem 0;">
-        <img src="/images/jardin/carte_herbarius.jpg" alt="Map to Herbarius" loading="lazy" style="max-width: 100%; height: auto;">
-        <p><a href="https://goo.gl/maps/DUlO9" target="_blank" rel="noopener">View on Google Maps</a></p>
-      </div>
-
+  <!-- ========== HERO ========== -->
+  <section class="hero hero--compact" style="background-image: url('/images/jardin/jardin_vue_haut.jpg');">
+    <div class="hero-content">
+      <h1 class="hero-title">Contact and practical information</h1>
+      <p class="hero-subtitle">Everything you need to find us and plan your visit</p>
     </div>
+  </section>
+
+  <main>
+
+    <!-- ========== CONTACT & HOURS ========== -->
+    <section class="section">
+      <div class="container">
+        <div class="ct-grid">
+
+          <div class="ct-block">
+            <h2 class="ct-block-title">Contact details</h2>
+            <address class="ct-address">
+              <p><strong>Florence GOULLEY</strong></p>
+              <p>704 Le Haut du Val</p>
+              <p>PLANGUENOUAL</p>
+              <p>22400 LAMBALLE ARMOR</p>
+              <p class="ct-gps">GPS: 48°32'43.4" N, 2°35'44.6" W</p>
+              <p class="ct-email">Contact by email only:<br><a href="mailto:f.goulley@herbarius.net">f.goulley@herbarius.net</a></p>
+            </address>
+          </div>
+
+          <div class="ct-block">
+            <h2 class="ct-block-title">Opening hours</h2>
+            <div class="ct-hours">
+              <div class="ct-hours-item">
+                <h3>Nursery</h3>
+                <p>From March to June, every morning from 9:30 am to noon, including Sundays and public holidays.</p>
+                <p>The rest of the year, please make an appointment by email.</p>
+              </div>
+              <div class="ct-hours-item">
+                <h3>Visits</h3>
+                <p>All year round by appointment by email.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MAP ========== -->
+    <section class="section section--white">
+      <div class="container">
+        <h2 class="section-title">How to find us</h2>
+        <p class="section-subtitle">On the Rennes–Brest road (RN12), between Saint-Brieuc and Lamballe</p>
+
+        <div class="ct-map">
+          <img src="/images/jardin/carte_herbarius.jpg" alt="Map to Herbarius" loading="lazy">
+        </div>
+        <p class="ct-map-link">
+          <a href="https://goo.gl/maps/DUlO9" class="btn btn-primary" target="_blank" rel="noopener">View on Google Maps</a>
+        </p>
+      </div>
+    </section>
+
   </main>
