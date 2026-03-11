@@ -27,9 +27,9 @@ jobs:
       - name: Deploy via FTP
         run: |
           sudo apt-get install -y lftp
-          lftp -u p6691,${{ secrets.FTP_PASSWORD }} ftp.webmo.fr <<SCRIPT
+          lftp -u mattviel,${{ secrets.FTP_PASSWORD }} ftp.webmo.fr <<SCRIPT
           set ftp:passive-mode yes
           set ftp:ssl-allow no
-          mirror --reverse --delete --verbose ./public/ /www/herbarius/
+          mirror --reverse --delete --exclude images/ --exclude documents/ --verbose ./public/ /www/herbarius/
           bye
           SCRIPT
