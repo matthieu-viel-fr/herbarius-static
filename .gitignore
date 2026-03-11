@@ -26,5 +26,8 @@ Thumbs.db
 # Drupal scrape artifacts
 scrape/
 
+# Generated documents (copied from data/ by generate script)
+src/documents/
+
 # Temporary files
 maintenance.html

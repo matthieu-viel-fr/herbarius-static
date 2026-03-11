@@ -30,6 +30,6 @@ jobs:
           lftp -u mattviel,${{ secrets.FTP_PASSWORD }} ftp.webmo.fr <<SCRIPT
           set ftp:passive-mode yes
           set ftp:ssl-allow no
-          mirror --reverse --delete --exclude images/ --exclude documents/ --verbose ./public/ /www/herbarius/
+          mirror --reverse --delete --exclude images/ --verbose ./public/ /www/herbarius/
           bye
           SCRIPT

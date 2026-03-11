@@ -12,7 +12,7 @@
  *   Sheet "Événements": columns Mois|Jour|Date|Horaire|Catégorie|Titre|Description|Prix|Contact
  */
 
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, readdir, copyFile, mkdir } from "node:fs/promises";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import ExcelJS from "exceljs";
@@ -357,7 +357,22 @@ async function main() {
   }
 
   const titre = configSheet.getCell("A1").value?.toString() || "";
-  const pdfFilename = configSheet.getCell("A2").value?.toString() || "";
+
+  // ── Find and copy PDF from data/ to src/documents/ ──
+  const dataDir = resolve(ROOT, "data");
+  const docsDir = resolve(ROOT, "src/documents");
+  await mkdir(docsDir, { recursive: true });
+
+  const dataFiles = await readdir(dataDir);
+  const pdfFile = dataFiles.find((f) => f.toLowerCase().endsWith(".pdf"));
+  const pdfFilename = pdfFile || "";
+
+  if (pdfFile) {
+    await copyFile(resolve(dataDir, pdfFile), resolve(docsDir, pdfFile));
+    console.log(`PDF: copied data/${pdfFile} → src/documents/${pdfFile}`);
+  } else {
+    console.log("PDF: no PDF found in data/.");
+  }
 
   // ── Events sheet ──
   const eventsSheet = workbook.getWorksheet("Événements");
