@@ -189,9 +189,10 @@ describe('Internal links', () => {
 
         $('a[href]').each((_, el) => {
           const href = $(el).attr('href');
-          // Skip external links, mailto, tel, anchors
+          // Skip external links, mailto, tel, anchors, and server-hosted assets
           if (!href || href.startsWith('http') || href.startsWith('mailto:') ||
-              href.startsWith('tel:') || href.startsWith('#')) {
+              href.startsWith('tel:') || href.startsWith('#') ||
+              href.startsWith('/images/') || href.startsWith('/documents/')) {
             return;
           }
 
