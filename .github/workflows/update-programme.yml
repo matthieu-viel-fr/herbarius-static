@@ -1,0 +1,48 @@
+name: Update programme from Excel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/programme.xlsx"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - name: Generate programme pages (FR + EN via DeepL)
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: node scripts/generate-programme.mjs
+
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/fr/programme.njk src/en/programme.njk
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore: regenerate programme pages from Excel"
+          git push
+
+      - run: npm test
+
+      - name: Deploy via FTP
+        run: |
+          sudo apt-get install -y lftp
+          lftp -u mattviel,${{ secrets.FTP_PASSWORD }} ftp.webmo.fr <<SCRIPT
+          set ftp:passive-mode yes
+          set ftp:ssl-allow no
+          mirror --reverse --delete --exclude images/ --exclude documents/ --verbose ./public/ /www/herbarius/
+          bye
+          SCRIPT
