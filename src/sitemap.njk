@@ -1,0 +1,21 @@
+---
+permalink: sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {%- set pages = ["index", "programme", "activites", "hebergements", "visite-virtuelle", "contact", "visites-botaniques", "ateliers", "conferences", "conception", "vente-plantes", "liste-tomates", "cabane", "qui-sommes-nous"] %}
+  {%- for slug in pages %}
+  <url>
+    <loc>https://herbarius.fr/fr/{{ slug }}.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://herbarius.fr/fr/{{ slug }}.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://herbarius.fr/en/{{ slug }}.html"/>
+  </url>
+  <url>
+    <loc>https://herbarius.fr/en/{{ slug }}.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://herbarius.fr/fr/{{ slug }}.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://herbarius.fr/en/{{ slug }}.html"/>
+  </url>
+  {%- endfor %}
+</urlset>

@@ -5,13 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ description }}">
   <title>{{ title }}</title>
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://herbarius.fr/{{ lang }}/{{ pageSlug }}.html">
+  <link rel="alternate" hreflang="fr" href="https://herbarius.fr/fr/{{ pageSlug }}.html">
+  <link rel="alternate" hreflang="en" href="https://herbarius.fr/en/{{ pageSlug }}.html">
+  <link rel="alternate" hreflang="x-default" href="https://herbarius.fr/fr/{{ pageSlug }}.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{% if lang == 'fr' %}fr_FR{% else %}en_GB{% endif %}">
+  <meta property="og:site_name" content="Herbarius">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="https://herbarius.fr/{{ lang }}/{{ pageSlug }}.html">
+  <meta property="og:image" content="https://herbarius.fr/images/jardin/jardin_vue_haut.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="https://herbarius.fr/images/jardin/jardin_vue_haut.jpg">
+
+  <!-- Favicon & fonts -->
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="alternate" hreflang="fr" href="../fr/{{ pageSlug }}.html">
-  <link rel="alternate" hreflang="en" href="../en/{{ pageSlug }}.html">
 </head>
 <body>
 
@@ -96,6 +117,35 @@
       </div>
     </div>
   </footer>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "additionalType": "https://schema.org/LocalBusiness",
+    "name": "Herbarius",
+    "description": "{% if lang == 'fr' %}Jardin botanique médiéval à Planguenoual, Bretagne. Plantes médicinales, aromatiques et comestibles.{% else %}Medieval botanical garden in Planguenoual, Brittany. Medicinal, aromatic and edible plants.{% endif %}",
+    "url": "https://herbarius.fr",
+    "image": "https://herbarius.fr/images/jardin/jardin_vue_haut.jpg",
+    "telephone": "+33603432528",
+    "email": "f.goulley@herbarius.net",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "704 Le Haut du Val",
+      "addressLocality": "Planguenoual",
+      "postalCode": "22400",
+      "addressRegion": "Bretagne",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.5228,
+      "longitude": -2.5906
+    },
+    "sameAs": []
+  }
+  </script>
 
   <script src="../js/main.js"></script>
 </body>
