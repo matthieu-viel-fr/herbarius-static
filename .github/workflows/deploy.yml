@@ -3,6 +3,12 @@ name: Build & Deploy FTP
 on:
   push:
     branches: [main]
+    paths:
+      - "src/**"
+      - ".eleventy.js"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/deploy.yml"
 
 jobs:
   deploy:
