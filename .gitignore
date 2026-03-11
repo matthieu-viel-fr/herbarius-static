@@ -28,10 +28,11 @@ scrape/
 
 # Images (hosted on server, not versioned)
 src/images/
-public/images/
+public/images
 
 # Generated documents (copied from data/ by generate script)
 src/documents/
+public/documents/
 
 # Temporary files
 maintenance.html
