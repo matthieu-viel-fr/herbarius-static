@@ -262,6 +262,7 @@ hr {
 
 .section {
   padding-block: var(--space-12);
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 .section--large {
