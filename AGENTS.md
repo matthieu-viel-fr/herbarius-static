@@ -1,45 +1,19 @@
 # Herbarius Static
 
 ## Projet
-Conversion du site Drupal 7 herbarius.net en site statique HTML/CSS/JS moderne.
+Site statique herbarius.net — jardin botanique médiéval à Planguenoual (22).
 - **Domaines** : herbarius.net / herbarius.fr (même site, redirection DNS)
 - **Langues** : Français (principal) + English
-- **Propriétaire** : Florence GOULLEY — Herbarius, jardin botanique médiéval à Planguenoual (22)
-
-## Architecture cible
-- Site 100% statique (HTML, CSS, JS vanilla ou minimal)
-- Pas de framework JS lourd — performance et simplicité
-- Hébergement statique (Netlify, Cloudflare Pages, ou serveur simple)
-- SSL valide obligatoire
-
-## Pages identifiées (depuis Drupal)
-| Slug | Titre | Status |
-|------|-------|--------|
-| accueil | Accueil | OK |
-| a-la-une | Programme / Prochains événements | OK |
-| activités | Activités | OK |
-| infos-pratiques | Infos pratiques | OK |
-| node/29 | Visite virtuelle | OK |
-| contact | Contact | OK |
-| visites-botaniques | Visites botaniques | OK |
-| ateliers | Ateliers | OK |
-| conferences | Conférences | OK |
-| conception | Conception de jardins médiévaux | OK |
-| vente-plantes | Vente de plantes | OK |
-| liste-tomates | Liste tomates | OK |
-| cabane-tarifs | Cabane - Tarifs | OK |
-| cabane-photos | Cabane - Photos | OK |
-| cabane-infos | Cabane - Nous joindre | OK |
-| cabane-activités | Cabane - Activités | ? (HTTP 400) |
-| accueil-groupes | Accueil de groupes | OK |
-| qui-sommes-nous | Qui sommes nous ? | OK |
+- **Propriétaire** : Florence GOULLEY
 
 ## Stack technique
 - **SSG** : Eleventy (11ty) v3
 - HTML5 sémantique avec templates Nunjucks (.njk)
-- CSS moderne (variables CSS, flexbox/grid)
+- CSS moderne (variables CSS, flexbox/grid, design tokens)
 - JS vanilla minimal (pas de framework)
 - **i18n** : FR + EN, layout partagé, contenus séparés par langue
+- **Hébergement** : FTP sur webmo.fr (user p6691)
+- **CI/CD** : GitHub Actions (deploy.yml + update-programme.yml)
 
 ## Architecture i18n
 ```
@@ -51,26 +25,49 @@ src/
   en/*.njk                  # Pages anglaises (contenu)
   css/style.css             # CSS partagé
   js/main.js                # JS partagé
+  images/                   # Images en local
 public/                     # Sortie (générée par eleventy)
   fr/*.html
   en/*.html
   index.html                # Redirect → /fr/index.html
 ```
 
+## Pages
+| Page | Description | Notes |
+|------|-------------|-------|
+| index | Accueil | Hero + sections |
+| programme | Programme / événements | Généré depuis Excel |
+| activites | Toutes les activités | Page mono, sections : visites, ateliers, conférences, conception, pépinière |
+| hebergements | Hébergements | Cabane, tente, camping |
+| visite-virtuelle | Visite virtuelle | Iframe vidéo |
+| contact | Contact et infos pratiques | Coordonnées, horaires, plan d'accès |
+| cabane | Cabane dans les arbres | Détails et photos |
+| qui-sommes-nous | À propos | Présentation |
+| liste-tomates | Liste des tomates | Catalogue |
+| infos-pratiques | Redirection → contact | Meta refresh, pas de layout |
+
+Pages historiques conservées (sous-pages de l'ancien site, redirigent ou sont autonomes) :
+visites-botaniques, ateliers, conferences, conception, vente-plantes
+
 ## Commandes
 - `npm run build` — génère le site dans public/
 - `npm run dev` — serveur de dev avec hot-reload
 - `npm run clean` — supprime les fichiers générés
 
-## Conventions
-- Langue du code et des commits : français pour le contenu, anglais pour le code
+## Conventions CSS
+- Préfixes par page : `.act-*` (activités), `.heb-*` (hébergements), `.prog-*` (programme), `.ct-*` (contact)
+- Classes communes : `.section`, `.section--white`, `.section--cream`, `.section-title`, `.section-subtitle`, `.container`
+- Hero pages : `.hero`, `.hero--compact`, `.hero--full` (générique) ou préfixé par page (`.act-hero`, `.heb-hero`)
+- Design tokens dans `:root` (couleurs, typo, espacements)
+
+## Pipeline Excel → Programme
+- **Script** : `scripts/generate-programme.mjs`
+- **Excel** : `data/programme.xlsx` (onglets "Config" + "Événements")
+- **Workflow** : `update-programme.yml` — parse Excel → commit FR+EN → test → deploy
+- Traduction automatique via DeepL API (secret `DEEPL_API_KEY`)
+
+## Conventions de code
+- Langue du contenu : français
+- Langue du code / commits : anglais ou français selon contexte
 - Encodage : UTF-8
-- Images/docs : restent hébergées sur herbarius.net, liens conservés — le propriétaire modifiera si besoin
-
-## Fonctionnalités dynamiques à remplacer
-- **Recherche Drupal** → recherche statique côté client (lunr.js ou similaire) ou suppression
-- **Formulaire de contact** → mailto: link ou service tiers (Formspree, etc.)
-- **Slideshow** (views_slideshow) → CSS/JS simple
-
-## Agents
-Ce projet utilise les agents bmad-bmm pour le workflow de développement.
+- Images : en local dans `src/images/`
