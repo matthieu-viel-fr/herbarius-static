@@ -2700,6 +2700,19 @@ tbody tr:hover {
   transform: scale(1.05);
 }
 
+.heb-card-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  aspect-ratio: 16 / 10;
+}
+
+.heb-card-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .heb-card-body {
   padding: var(--space-5);
   display: flex;
