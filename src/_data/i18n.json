@@ -33,7 +33,8 @@
       "pepiniere": "P\u00e9pini\u00e8re :",
       "pepiHoraires": "De mars \u00e0 juin, tous les matins de 9h30 \u00e0 midi.",
       "visites": "Visites :",
-      "visitesHoraires": "Toute l\u2019ann\u00e9e sur rdv par mail."
+      "visitesHoraires": "Toute l\u2019ann\u00e9e sur rdv par mail.",
+      "siteBy": "Site r\u00e9alis\u00e9 par Matthieu Viel"
     }
   },
   "en": {
@@ -70,7 +71,8 @@
       "pepiniere": "Plant nursery:",
       "pepiHoraires": "March to June, every morning from 9:30am to noon.",
       "visites": "Tours:",
-      "visitesHoraires": "All year round by appointment (email)."
+      "visitesHoraires": "All year round by appointment (email).",
+      "siteBy": "Website by Matthieu Viel"
     }
   }
 }
